@@ -1,0 +1,13 @@
+I will place all my commands in this file
+
+(### Select all rows from the `classes` tables)
+SELECT * FROM classes
+
+(### Select the `name` and `credits` from the `classes` table where the number of credits is greater than 3)
+SELECT name, credits FROM classes WHERE credits > 3
+
+(### All rows from the `classes` table where credits is an even number)
+SELECT * FROM classes WHERE mod(credits,2) = 0
+
+(### All of Tianna's enrollments that she hasn't yet received a grade for)
+school=# SELECT * FROM enrollments WHERE student_id = 1 AND grade IS NULL
